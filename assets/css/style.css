@@ -4,16 +4,29 @@
   box-sizing: border-box;
 }
 
+#main-section{
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-attachment: fixed;
+  background-size: cover;
+  
+
+}
+
+
 nav{
   display: flex;
   justify-content: space-around;
    align-items: center;
   min-height: 8vh;
   font-family: 'Poppins', sans-serif;
+  color: rgba(29, 29, 29, 0);
 }
 
 .navbar-brand{
   font-size: 25px;
+  color:#b9b9b9;
 }
 
 .navbar-collapse{
@@ -26,6 +39,10 @@ nav{
   margin:15px;
   align-items: center;
   
+}
+
+.nav-link{
+  color:#b9b9b9
 }
 
 
@@ -51,7 +68,7 @@ nav{
 
 .footer{
   padding: 10px 0;
-  background-color: #c7c7c7;
+  background-color: #181818;
 
 }
 
