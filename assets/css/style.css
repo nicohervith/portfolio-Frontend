@@ -1,174 +1,310 @@
-*{
+* {
   font-family: sans-serif;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
-
-#main-section{
-  background-image: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-position: center ;
-  background-attachment: fixed;
-  background-size: cover;
-  
+body {
+  background-color: rgb(28, 28, 28);
 }
 
-nav{
+#main-section {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+nav {
   display: flex;
   justify-content: space-around;
-   align-items: center;
+  align-items: center;
   min-height: 8vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: rgba(29, 29, 29, 0);
 }
 
-.navbar-brand{
+.navbar-brand {
   font-size: 25px;
-  color:#dfdfdf;
+  color: #dfdfdf;
 }
 
-.navbar-brand b{
-  color:#91d425;
+.navbar-brand b {
+  color: #91d425;
 }
 
-.navbar-brand:hover{
-  color:#91d425;
+.navbar-brand:hover {
+  color: #91d425;
 }
 
-.navbar-collapse{
+.navbar-collapse {
   display: flex;
   justify-content: space-around;
   width: 30%;
 }
 
-.navbar-nav li{
-  margin:15px;
+.navbar-nav li {
+  margin: 15px;
   align-items: center;
-  
 }
 
-.nav-link{
- color:#dfdfdf;
+.nav-link {
+  color: #dfdfdf;
 }
 
-.nav-link:hover{
-  color:#91d425;
+.nav-link:hover {
+  color: #91d425;
 }
 
-.card-container{
-  display:flex;
+/* .card-container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-.card{
-  margin:10px;
-}
+} */
+/* .card {
+  margin: 10px;
+} */
 
-.border{
+.border {
   width: 100px;
-  height: 8px;
+  height: 5px;
   background: #91d425;
   margin: 10px auto;
-  border:none;
-
-}
-
-/******* project-section ******/
-.project-section{
-  background-color: rgb(40, 40, 40);
-}
-.project-title{
-  display: grid;
-  color:#eeeeee;
-  justify-content: center;
+  border: none !important;
 }
 
 /****** Skills Section ******/
-.skills{
-  background-color:   rgb(30, 30, 30);;
+.skills {
+  background-color: rgb(25, 25, 25);
 }
 
-.about-section{
+.about-section {
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
-.about-text{
-  color:#eeeeee;
-  margin:auto;
-  text-align: center;
-
+.about-text {
+  color: #eeeeee;
+  margin: auto;
+}
+.about-text h3 {
+  margin: auto;
+  width: 80%;
 }
 
-.about-text p{
+.about-text p {
   max-width: 80%;
   margin: auto;
 }
+.text-about-me {
+  color: #cccccc;
+}
 
-.container div div{
+.container div div {
   background-color: #141414;
-  margin:3px;
+  margin: 3px;
 }
 
-.container h3{
-  color:#eeeeee
+.container h3 {
+  color: #eeeeee;
 }
 
-.container .col{
-  margin:10;
+.container .col {
   width: 200px;
   text-align: center;
-  color:#eeeeee;
+  cursor: pointer;
   height: 140px;
-  
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
+.col i {
+  font-size: 45px;
+  color: #eeeeee;
+}
+.col i:hover {
+  color: #eeeeee;
+}
+.col p {
+  color: #eeeeee;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
 
+/******* project-section ******/
+.project-section {
+  background-color: rgb(32, 32, 32);
+}
+.project-title {
+  display: grid;
+  color: #eeeeee;
+  margin: auto;
+  justify-content: center;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 90%;
+  margin: auto;
+  gap: 10px;
+  justify-content: center;
+}
+.card {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  cursor: pointer;
+  width: 450px;
+  overflow: hidden;
+  border-radius: 3px;
+  border: none;
+  /*  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5); */
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  transition: all 400ms ease-out;
+  will-change: transform;
+  border-radius: 3px;
+}
+.card .card-body {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(48, 48, 48, 0.7);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+.card:hover > .card-body {
+  visibility: visible;
+  opacity: 1;
+}
 
+.card .card-body p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+  height: 140px;
+}
+.container-button {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+}
+.container-button button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #91d425;
+  border: none;
+  color: #f3f3f3;
+  font-size: 13px;
+}
+.container-button button:hover {
+  background-color: #6da11a;
+}
 
-/* FOOTER */
+/******** CONTACT *********/
+.project-title-contact {
+  display: grid;
+  color: #eeeeee;
+  justify-content: center;
+  margin-top: 50px;
+}
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 50px 0 50px 10px;
+  justify-content: center;
+}
+.contact-box {
+  width: 250px;
+  background-color: #292929;
+  height: 150px;
+  border-radius: 5px;
+  display: flex;
+}
+.contact-box a {
+  text-decoration: none;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+}
+.icon i {
+  font-size: 40px;
+  color: #c8c8c8;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+}
+.icon p {
+  color: #c8c8c8;
+  cursor: pointer;
+  margin: auto;
+}
+
 /*************  FOOTER  *************/
 
-.footer{
+.footer {
   padding: 10px 0;
   background-color: #181818;
-
 }
 
-.footer .social{
+.footer .social {
   align-items: center;
   text-align: center;
   padding-bottom: 25px;
   color: #dbdbdb;
 }
 
-.footer .social a{
-    font-size: 24px;
-    color:inherit;
-    border:1px solid #91d425;
-    width: 40px;
-    height: 40px;
-    line-height: 34px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-    opacity: 0.75;
-
+.footer .social a {
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid #91d425;
+  width: 40px;
+  height: 40px;
+  line-height: 34px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
 }
 
-.footer .social a:hover{
-    opacity: 0.9;
-    color: #91d425;
+.footer .social a:hover {
+  opacity: 0.9;
+  color: #91d425;
 }
 
-
-@media only screen and (max-width:768px){
-
-   
- 
+@media only screen and (max-width: 768px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-text {
+    margin-bottom: 20px;
+  }
+  .column-skills {
+    display: flex;
+    justify-content: center;
+  }
 }
-
-
-
