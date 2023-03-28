@@ -21,7 +21,11 @@ nav {
   align-items: center;
   min-height: 8vh;
   font-family: "Poppins", sans-serif;
-  color: rgba(29, 29, 29, 0);
+}
+.navbar {
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
 }
 
 .navbar-brand {
@@ -46,6 +50,7 @@ nav {
 .navbar-nav li {
   margin: 15px;
   align-items: center;
+  color: #91d425 !important;
 }
 
 .nav-link {
@@ -53,7 +58,7 @@ nav {
 }
 
 .nav-link:hover {
-  color: #91d425;
+  color: #91d425 !important;
 }
 
 /* .card-container {
@@ -281,7 +286,7 @@ nav {
   color: inherit;
   border: 1px solid #91d425;
   width: 40px;
-  height: 40px;
+  height: 10px;
   line-height: 34px;
   display: inline-block;
   text-align: center;
@@ -289,10 +294,9 @@ nav {
   margin: 0 8px;
   opacity: 0.75;
 }
-
-.footer .social a:hover {
-  opacity: 0.9;
-  color: #91d425;
+.social p {
+  font-size: 12px;
+  color: #c8c8c8;
 }
 
 @media only screen and (max-width: 768px) {
@@ -306,5 +310,39 @@ nav {
   .column-skills {
     display: flex;
     justify-content: center;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 504px) {
+  .column-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: auto;
+  }
+  .column-skills .col {
+    width: 165px;
+    margin: auto;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 30px 0 50px 0px;
+    justify-content: center;
+  }
+  .contact-box {
+    width: 110px;
+    background-color: #292929;
+    height: 150px;
+    border-radius: 5px;
+    display: flex;
   }
 }
