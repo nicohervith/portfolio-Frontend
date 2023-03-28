@@ -85,22 +85,26 @@ nav {
 }
 
 .about-section {
+  width: 95%;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
 }
 
 .about-text {
   color: #eeeeee;
-  margin: auto;
 }
-.about-text h3 {
+.about-text h4 {
   margin: auto;
-  width: 80%;
+  width: 100%;
+  color: #a7a7a7;
 }
 
 .about-text p {
-  max-width: 80%;
-  margin: auto;
+  max-width: 90%;
+}
+.nombre {
+  margin-top: 50px !important;
 }
 .text-about-me {
   color: #cccccc;
@@ -141,6 +145,32 @@ nav {
 }
 .show {
   display: block;
+}
+
+.column-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.datos {
+  display: flex;
+  flex-direction: row;
+}
+.edad {
+  color: #7e7e7e;
+  margin-left: 5px;
+}
+.download {
+  text-decoration: none;
+  color:#141414;
+}
+.down-button {
+  color:#141414;
+  text-decoration: none;
+  width: 150px;
+  border-radius: 3px;
+  height: 40px;
+  background-color: #91d425;
+  border: none;
 }
 
 /******* project-section ******/
@@ -275,9 +305,8 @@ nav {
 }
 
 .footer .social {
-  align-items: center;
   text-align: center;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
   color: #dbdbdb;
 }
 
