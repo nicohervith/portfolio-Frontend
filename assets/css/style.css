@@ -161,10 +161,13 @@ nav {
 }
 .download {
   text-decoration: none;
-  color:#141414;
+  color: #141414;
+}
+.download:hover {
+  color: #ffffff;
 }
 .down-button {
-  color:#141414;
+  color: #141414;
   text-decoration: none;
   width: 150px;
   border-radius: 3px;
@@ -172,6 +175,7 @@ nav {
   background-color: #91d425;
   border: none;
 }
+
 
 /******* project-section ******/
 .project-section {
