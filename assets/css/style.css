@@ -197,7 +197,7 @@ nav {
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 85%;
+  width: 80%;
   margin: auto;
   gap: 10px;
   justify-content: center;
@@ -207,7 +207,7 @@ nav {
   position: relative;
   height: 220px;
   cursor: pointer;
-  width: 375px;
+  width: 100%;
   overflow: hidden;
   border-radius: 3px;
   border: none;
