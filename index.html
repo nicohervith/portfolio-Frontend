@@ -33,139 +33,208 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#" data-scroll-spy><b>Home</b></a>
+            <a class="nav-link" aria-current="page" href="#main-section"><b>Home</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills" data-scroll-spy><b>Skills</b></a>
+            <a class="nav-link" href="#skills"><b>Skills</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#project-section" data-scroll-spy><b>Projects</b></a>
+            <a class="nav-link" href="#project-section"><b>Projects</b></a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link" href="#contact" data-scroll-spy><b>Contact</b></a>
+            <a class="nav-link" href="#contact"><b>Contact</b></a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Modal Galería de Imágenes -->
+  <div id="galleryModal" class="gallery-modal">
+    <div class="gallery-modal-content">
+      <button class="gallery-close" onclick="closeGallery()">&times;</button>
+      <div class="gallery-container">
+        <button class="gallery-prev" onclick="previousImage()">❮</button>
+        <img id="galleryImage" src="" alt="Gallery image" class="gallery-image" />
+        <button class="gallery-next" onclick="nextImage()">❯</button>
+      </div>
+      <div class="gallery-info">
+        <h3 id="galleryTitle"></h3>
+        <span id="imageCounter" class="image-counter"></span>
+      </div>
+    </div>
+  </div>
 
   <article>
     <section id="main-section">
-
-
+      <div style="text-align: center; z-index: 10; position: relative;">
+        <h1
+          style="font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; background: linear-gradient(135deg, #e0e7ff 0%, #00d4ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Nicolás Hervith</h1>
+        <h2 style="font-size: 1.8rem; color: #a0aec0; margin-bottom: 30px; font-weight: 400;">Full Stack Developer</h2>
+        <p style="font-size: 1.1rem; color: #cbd5e1; max-width: 600px; margin: 0 auto 40px; line-height: 1.8;">
+          Desarrollador full stack especializado en React, JavaScript, Angular y soluciones backend. Creo experiencias
+          web modernas y escalables.</p>
+        <div style="display: flex; gap: 15px; justify-content: center;">
+          <a href="#skills"
+            style="padding: 12px 30px; background: linear-gradient(135deg, #00d4ff, #7c3aed); border: none; border-radius: 50px; color: #0f0f1a; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);">Ver
+            Más</a>
+          <a href="#contact"
+            style="padding: 12px 30px; border: 2px solid #00d4ff; border-radius: 50px; color: #00d4ff; background: transparent; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.3s ease;">Contacto</a>
+        </div>
+      </div>
     </section>
 
     <section id="skills" class="skills">
-      <br />
-      <br />
       <div class="project-title">
-        <h3> <b>Sobre mí</b></h3>
+        <h3><b>Sobre mí</b></h3>
         <div class="border"></div>
       </div>
-      <br />
 
       <div class="about-section">
-
         <div class="about-text">
-          <div class="about-text">
-            <h4> Quién soy?</h4>
-          </div>
-          <h3 class="nombre"> Soy Nicolás, FullStack developer</h3>
-          <br />
-          <p class="text-about-me">Desarrollador full stack, actualmente trabajando de manera freelance. Me encuentro
-            especializándome en React y JavaScript.
-            Cuento con conocimientos en bases de datos relacionales y no relacionales: MySQL, MongoDB.
-          </p>
+          <h4>Quién soy?</h4>
+          <h3 class="nombre">Soy Nicolás, FullStack developer</h3>
+          <p class="text-about-me">Desarrollador Fullstack con más de 3 años de experiencia. Especialista en el
+            ecosistema
+            JavaScript/TypeScript, con un sólido dominio de Angular y React para el Frontend y una reciente
+            especialización en Laravel y NodeJS para soluciones Backend.
+            Poseo una destacada capacidad resolutiva y de fidelización de clientes, garantizando
+            soluciones escalables, optimizadas y centradas en la experiencia del usuario</p>
           <div class="datos">
-            <p>Edad:
-            <p class="edad">26</p>
-            </p>
+            <p>Edad:</p>
+            <p class="edad">28</p>
           </div>
           <div class="datos">
-            <p>Email:
-            <p class="edad">n_hervith@hotmail.com</p>
-            </p>
+            <p>Email:</p>
+            <p class="edad">nhervith@gmail.com</p>
           </div>
           <a class="download" href="./assets/resume/cv.pdf" download="cv" title="Descargar">
             <button class="down-button">
-              <i class="fa-solid fa-file-arrow-down" style="margin-right: 10px;"></i>Descargar cv</a>
-          </button>
+              <i class="fa-solid fa-file-arrow-down"></i>Descargar CV
+            </button>
+          </a>
         </div>
-        <div class="container">
 
-          <div class="about-text">
-            <h4> Skills</h4>
-          </div>
-          <br />
-          <div class="column-skills row row-cols-2">
-            <div id="col" class="col">
-              <i class="fa-brands fa-html5"></i>
-              <div id="text" class="active hide">
+        <div class="container">
+          <div style="width: 100%;">
+            <h3>Skills</h3>
+            <div class="column-skills">
+              <div class="col">
+                <i class="fa-brands fa-html5"></i>
                 <p>HTML</p>
               </div>
-            </div>
-            <div id="col" class="col">
-              <i class="fa-brands fa-js"></i>
-              <div id="text" class="active hide">
+              <div class="col">
+                <i class="fa-brands fa-js"></i>
                 <p>JavaScript</p>
               </div>
-            </div>
-            <div id="col" class="col"><i class="fa-brands fa-css3-alt"></i>
-              <div id="text" class="active hide">
+              <div class="col">
+                <i class="fa-brands fa-css3-alt"></i>
                 <p>CSS</p>
               </div>
-            </div>
-            <div id="col" class="col"><i class="fa-brands fa-react"></i>
-              <div id="text" class="active hide">
+              <div class="col">
+                <i class="fa-brands fa-react"></i>
                 <p>React</p>
               </div>
-            </div>
-            <div id="col" class="col"><i class="fa-brands fa-bootstrap"></i>
-              <div id="text" class="active hide">
+              <div class="col">
+                <i class="fa-brands fa-bootstrap"></i>
                 <p>Bootstrap</p>
               </div>
-            </div>
-            <div id="col" class="col"><i class="fa-brands fa-github"></i>
-              <div id="text" class="active hide">
-                <p>Github</p>
+              <div class="col">
+                <i class="fa-brands fa-github"></i>
+                <p>GitHub</p>
               </div>
-            </div>
-            <div id="col" class="col"><i class="fa-brands fa-angular"></i>
-              <div id="text" class="active hide">
+              <div class="col">
+                <i class="fa-brands fa-angular"></i>
                 <p>Angular</p>
               </div>
-            </div>
-            <div id="col" class="col">
-              <i class="fa-brands fa-java"></i>
-              <div id="text" class="active hide">
-                <p>Java</p>
+              <div class="col">
+                <i class="fa-brands fa-react"></i>
+                <p>React Native</p>
+              </div>
+              <div class="col">
+                <i class="fa-brands fa-node-js"></i>
+                <p>Node.js</p>
+              </div>
+              <div class="col">
+                <i class="fa-brands fa-laravel"></i>
+                <p>Laravel</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <br />
-      <br />
     </section>
 
     <section id="project-section" class="project-section">
-      <br />
-      <br />
       <div class="project-title">
-        <h3> <b>Proyectos</b></h3>
+        <h3><b>Proyectos</b></h3>
         <div class="border"></div>
       </div>
-      <br />
 
       <div class="card-container">
 
         <div class="card">
-          <img src="./assets/img/multimedia2.png" class="card-img-top" alt="" />
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/mannyapp1.jpeg" class="card-img-top" alt="App multimedia" />
+
+            <button class="gallery-badge"
+              onclick="openGallery('App para contratación de servicios', ['./assets/img/mannyapp1.jpeg', './assets/img/mannyapp2.jpeg', './assets/img/mannyapp3.jpeg', './assets/img/mannyapp4.jpeg'])">
+              <i class="fa-regular fa-images"></i>
+              <span>Ver Galería</span>
+            </button>
+          </div>
           <div class="card-body">
-            <p class="card-text">App multimedia para reproducir música, realizado con React
+            <p class="card-text">Aplicación mobile realizado con React Native. En desarrollo - Próximamente disponible.
             </p>
+            <div class="container-button">
+              <a href="https://github.com/nicohervith/manny-app" target="_blank" rel="noopener">
+                <button>Repositorio</button>
+              </a>
+              <button style="opacity: 0.5; cursor: not-allowed;">Sitio web</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/bilingual1.png" class="card-img-top" alt="App multimedia" />
+            <button class="gallery-badge"
+              onclick="openGallery('App para aprendizaje de inglés', ['./assets/img/bilingual1.png', './assets/img/bilingual2.png', './assets/img/bilingual3.png', './assets/img/bilingual4.png'])">
+              <i class="fa-regular fa-images"></i>
+              <span>Ver Galería</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Bilingual App
+              Frontend: App móvil multiplataforma con React Native.
+              Backend: Node.js para procesamiento de pagos con Stripe.
+              Infraestructura: Autenticación, Database y Hosting vía Firebase.
+              Estado: En desarrollo activo con integración de pasarela de pagos funcional.
+            </p>
+            <div class="container-button">
+              <a href="https://github.com/nicohervith/bilingual-app" target="_blank" rel="noopener">
+                <button>Repositorio</button>
+              </a>
+              <a href="https://bilingualsite-ee6f8.web.app" target="_blank" rel="noopener">
+                <button>Sitio web</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/multimedia2.png" class="card-img-top" alt="App multimedia" />
+            <!-- <button class="gallery-badge"
+              onclick="openGallery('App multimedia para reproducir música', ['./assets/img/multimedia2.png'])">
+              <i class="fa-regular fa-images"></i>
+              <span>Ver Galería</span>
+            </button> -->
+          </div>
+          <div class="card-body">
+            <p class="card-text">App multimedia para reproducir música, realizado con React</p>
             <div class="container-button">
               <a href="https://github.com/nicohervith/MusicReproductor-react" target="_blank" rel="noopener">
                 <button>Repositorio</button></a>
@@ -177,28 +246,17 @@
         </div>
 
         <div class="card">
-          <img src="./assets/img/livebets.png" class="card-img-top" alt="" />
-          <div class="card-body">
-            <p class="card-text">Livebets. Rediseño de sitio web de apuestas, con agregado de responsive design y
-              funcionalidades JavaScript.
-            </p>
-            <div class="container-button">
-              <a href="https://github.com/nicohervith/livebets" target="_blank" rel="noopener">
-                <button>Repositorio</button></a>
-
-              <button>Sitio web</button>
-
-            </div>
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/ecommerceproject.png" class="card-img-top" alt="Ecommerce React" />
+            <!-- <button class="gallery-badge"
+              onclick="openGallery('Ecommerce React + Material-UI', ['./assets/img/ecommerceproject.png'])">
+              <i class="fa-regular fa-images"></i>
+              <span>Ver Galería</span>
+            </button> -->
           </div>
-        </div>
-
-        <div class="card">
-          <img src="./assets/img/ecommerceproject.png" class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">Ecommerce realizado con React y Material-ui, backend simple con Node y express y
-              pasarela
-              de pago con Stripe.
-            </p>
+              pasarela de pago con Stripe.</p>
             <div class="container-button">
               <a href="https://github.com/nicohervith/ecommerce-react-mui" target="_blank" rel="noopener">
                 <button>Repositorio</button></a>
@@ -210,10 +268,26 @@
         </div>
 
         <div class="card">
-          <img src="./assets/img/hone.png" class="card-img-top" alt="..." />
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/livebets.png" class="card-img-top" alt="Livebets" />
+          </div>
           <div class="card-body">
-            <p class="card-text">Aurora, sitio web de ventas. Agregado de responsive design y rediseño del sitio.
-            </p>
+            <p class="card-text">Livebets. Rediseño de sitio web de apuestas, con agregado de responsive design y
+              funcionalidades JavaScript.</p>
+            <div class="container-button">
+              <a href="https://github.com/nicohervith/livebets" target="_blank" rel="noopener">
+                <button>Repositorio</button></a>
+              <button>Sitio web</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/hone.png" class="card-img-top" alt="Aurora" />
+          </div>
+          <div class="card-body">
+            <p class="card-text">Aurora, sitio web de ventas. Agregado de responsive design y rediseño del sitio.</p>
             <div class="container-button">
               <button>Repositorio</button>
               <a href="https://brilliant-shortbread-03aed2.netlify.app/" target="_blank">
@@ -224,10 +298,11 @@
         </div>
 
         <div class="card">
-          <img src="./assets/img/carnivoras-arg-react.png" class="card-img-top" alt="..." />
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/carnivoras-arg-react.png" class="card-img-top" alt="Carnívoras Argentina" />
+          </div>
           <div class="card-body">
-            <p class="card-text">Remake de sitio web realizado con React y Bootstrap.
-            </p>
+            <p class="card-text">Remake de sitio web realizado con React y Bootstrap.</p>
             <div class="container-button">
               <a href="https://github.com/nicohervith/web-page-CarnivorasArgentina" target="_blank">
                 <button>Repositorio</button>
@@ -240,7 +315,9 @@
         </div>
 
         <div class="card">
-          <img src="./assets/img/arqproject2.png" class="card-img-top" alt="..." />
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/arqproject2.png" class="card-img-top" alt="Arquitectos" />
+          </div>
           <div class="card-body">
             <p class="card-text">Sitio web para arquitectos realizado con React y React Bootstrap. Aplicando CSS y JS.
             </p>
@@ -256,10 +333,11 @@
         </div>
 
         <div class="card">
-          <img src="./assets/img/nogaflex.png" class="card-img-top" alt="..." />
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/nogaflex.png" class="card-img-top" alt="Nogaflex" />
+          </div>
           <div class="card-body">
-            <p class="card-text">Sitio web para fábrica de pinturas
-            </p>
+            <p class="card-text">Sitio web para fábrica de pinturas</p>
             <div class="container-button">
               <a href="" target="_blank">
                 <button>Repositorio</button>
@@ -272,10 +350,11 @@
         </div>
 
         <div class="card">
-          <img src="./assets/img/ergio.png" class="card-img-top" alt="..." />
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/ergio.png" class="card-img-top" alt="Ergio" />
+          </div>
           <div class="card-body">
-            <p class="card-text">Portfolio para fábrica de pinturas realizado con HTML, CSS y JavaScript
-            </p>
+            <p class="card-text">Portfolio para fábrica de pinturas realizado con HTML, CSS y JavaScript</p>
             <div class="container-button">
               <a href="https://github.com/nicohervith/ergio" target="_blank">
                 <button>Repositorio</button>
@@ -288,11 +367,12 @@
         </div>
 
         <div class="card">
-          <img src="./assets/img/portfolioargpro.png" class="card-img-top" alt="..." />
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="./assets/img/portfolioargpro.png" class="card-img-top" alt="Argentina Programa" />
+          </div>
           <div class="card-body">
             <p class="card-text">Portfolio realizado como proyecto final del curso de Argentina Programa. Desarrollado
-              en Angular y TypeScript junto con bootstrap en el front, y Java y MySQL para el backend
-            </p>
+              en Angular y TypeScript junto con bootstrap en el front, y Java y MySQL para el backend</p>
             <div class="container-button">
               <a href="https://github.com/nicohervith/finalProject-argPrograma" target="_blank">
                 <button>Repositorio</button>
@@ -309,59 +389,49 @@
       <br>
       <br />
       <br />
-
     </section>
 
     <section id="contact">
       <div class="project-title-contact">
-        <h3> <b>Contacto</b></h3>
+        <h3><b>Contacto</b></h3>
         <div class="border"></div>
       </div>
       <div class="contact-container">
-
         <div class="contact-box">
           <div class="icon">
-            <a href="https://github.com/nicohervith" target="_blank" rel="nooper">
+            <a href="https://github.com/nicohervith" target="_blank" rel="noopener">
               <i class="fa-brands fa-github"></i>
-              <p>Seguime</p>
+              <p>GitHub</p>
             </a>
           </div>
         </div>
 
         <div class="contact-box">
           <div class="icon">
-
-            <a href="mailto:n_hervith@hotmail..com" target="_blank" rel="nooper">
-              <div>
-                <i class="fa-solid fa-paper-plane"></i>
-              </div>
-              <div>
-                <p>Email</p>
-              </div>
+            <a href="mailto:nhervith@gmail.com" target="_blank" rel="noopener">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email</p>
             </a>
           </div>
         </div>
 
         <div class="contact-box">
           <div class="icon">
-            <a href="https://www.linkedin.com/in/nicol%C3%A1s-hervith-048623203/" target="_blank" rel="nooper">
+            <a href="https://www.linkedin.com/in/nicolás-hervith-048623203/" target="_blank" rel="noopener">
               <i class="fa-brands fa-linkedin"></i>
-              <p>Seguime</p>
+              <p>LinkedIn</p>
             </a>
           </div>
         </div>
-
       </div>
     </section>
 
     <section class="footer">
-      <br>
       <div class="social">
-        <p>Copyright © 2023 @nicohervith</p>
+        <p>Copyright © 2026 @nicohervith</p>
         <p>All rights reserved</p>
       </div>
     </section>
-
   </article>
 
 
